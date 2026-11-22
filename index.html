@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090b">
+  <title>THE VEIL — Some things should stay hidden</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="scanlines"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-mark">V</div>
+  <div class="loading-label">RECONNECTING TO ARCHIVE</div>
+  <div class="loading-track"><span></span></div>
+  <div class="loading-percent" id="loadingPercent">00%</div>
+</div>
+
+<header class="topbar">
+  <a class="brand" href="#home">
+    <span class="brand-icon">V</span>
+    <span>THE <b>VEIL</b></span>
+  </a>
+
+  <nav>
+    <a href="#phenomena">PHENOMENA</a>
+    <a href="#incident">THE INCIDENT</a>
+    <a href="#evidence">EVIDENCE</a>
+    <a href="#protocol">PROTOCOL</a>
+  </nav>
+
+  <div class="status"><i></i> ARCHIVE CONNECTION: UNSTABLE</div>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+</header>
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <video class="hero-video" autoplay muted loop playsinline preload="auto">
+      <source src="images/forest.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-vignette"></div>
+
+    <div class="hero-content">
+      <div class="eyebrow">
+        <span class="red-dot"></span>
+        CLASSIFIED RESEARCH DIVISION
+        <span class="eyebrow-line"></span>
+        EST. 1983
+      </div>
+
+      <h1>THE<br><span>VEIL</span></h1>
+
+      <p class="hero-sub">THERE IS A WORLD BENEATH OURS.</p>
+
+      <p class="hero-copy">
+        Every town has a story nobody believes.<br>
+        Every forest has a place nobody returns from.
+      </p>
+
+      <a href="#phenomena" class="discover-btn">
+        <span>ENTER THE ARCHIVE</span>
+        <b>↘</b>
+      </a>
+
+      <div class="hero-warning">
+        <span>!</span>
+        IF YOU HEAR YOUR NAME IN THE WOODS — DO NOT ANSWER.
+      </div>
+    </div>
+
+    <div class="hero-side-note">
+      44° 09' 12.8" N<br>
+      19° 32' 04.1" W<br>
+      <span>LOCATION REDACTED</span>
+    </div>
+
+    <div class="hero-bottom">
+      <span>CASE FILE 001 — BLACKWOOD</span>
+      <span>DO NOT DISTRIBUTE</span>
+      <span>SCROLL TO INVESTIGATE ↓</span>
+    </div>
+
+  </section>
+
+  <!-- INTRO -->
+
+  <section class="intro">
+    <div class="section-kicker">01 / BEYOND THE KNOWN</div>
+
+    <div class="intro-grid">
+      <div class="intro-text">
+        <h2>NOT EVERYTHING<br>THAT EXISTS<br>CAN BE EXPLAINED.</h2>
+      </div>
+
+      <div>
+        <p>
+          Since 1983, our research division has documented events
+          that challenge everything we understand about reality.
+          These files contain reports, recordings and evidence
+          that were never meant to be discovered.
+        </p>
+        <div class="classified-stamp">CLASSIFIED<br>LEVEL 04</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHENOMENA -->
+
+  <section class="phenomena" id="phenomena">
+
+    <div class="section-kicker">02 / ARCHIVE DATABASE</div>
+
+    <div class="section-heading">
+      <div>
+        <h2>THE PHENOMENA</h2>
+        <p>ENTITIES THAT SHOULD NOT EXIST.</p>
+      </div>
+      <span class="archive-count">06 DOCUMENTED FILES</span>
+    </div>
+
+    <div class="signal-strip">
+      <span class="signal-bars">▂ ▄ ▆ ▃ ▇ ▂</span>
+      <span>SCANNING UNKNOWN FREQUENCIES...</span>
+      <span>CONNECTION UNSTABLE</span>
+    </div>
+
+    <div class="filter-row">
+      <button class="filter active" data-filter="all">ALL FILES</button>
+      <button class="filter" data-filter="entity">ENTITIES</button>
+      <button class="filter" data-filter="location">LOCATIONS</button>
+      <button class="filter" data-filter="signal">SIGNALS</button>
+    </div>
+
+    <div class="entity-grid">
+
+      <!-- ENTITY 001 -->
+
+      <article class="entity-card" data-name="The Hollow" data-number="001" data-type="entity">
+        <div class="entity-art art-hollow">
+          <span class="art-coordinate">51° 08' N</span>
+          <div class="hollow-shape"></div>
+          <span class="art-label">FIGURE DETECTED</span>
+          <span class="entity-number">001</span>
+        </div>
+
+        <div class="entity-info">
+          <div class="entity-meta">
+            <span>ENTITY / 001</span>
+            <span class="risk">UNKNOWN</span>
+          </div>
+          <h3>THE HOLLOW</h3>
+          <p>A silhouette without a face. It gets closer when you look away.</p>
+          <button class="open-file">OPEN CASE FILE ↗</button>
+        </div>
+      </article>
+
+      <!-- ENTITY 002 -->
+
+      <article class="entity-card" data-name="The Choir" data-number="002" data-type="signal">
+        <div class="entity-art art-choir">
+          <span class="art-coordinate">107.9 MHz</span>
+          <div class="radio-wave"></div>
+          <span class="art-label">AUDIO DETECTED</span>
+          <span class="entity-number">002</span>
+        </div>
+
+        <div class="entity-info">
+          <div class="entity-meta">
+            <span>SIGNAL / 002</span>
+            <span class="risk">ACTIVE</span>
+          </div>
+          <h3>THE CHOIR</h3>
+          <p>Eleven voices. One recording. A new voice every time it plays.</p>
+          <button class="open-file">OPEN CASE FILE ↗</button>
+        </div>
+      </article>
+
+      <!-- ENTITY 003 -->
+
+      <article class="entity-card" data-name="The Red Room" data-number="003" data-type="location">
+        <div class="entity-art art-room">
+          <span class="art-coordinate">ROOM 013</span>
+          <div class="door-shape"></div>
+          <span class="art-label">LOCATION IMPOSSIBLE</span>
+          <span class="entity-number">003</span>
+        </div>
+
+        <div class="entity-info">
+          <div class="entity-meta">
+            <span>LOCATION / 003</span>
+            <span class="risk">UNRESOLVED</span>
+          </div>
+          <h3>THE RED ROOM</h3>
+          <p>A door that appears in buildings where no room exists.</p>
+          <button class="open-file">OPEN CASE FILE ↗</button>
+        </div>
+      </article>
+
+      <!-- ENTITY 004 -->
+
+      <article class="entity-card" data-name="The Watcher" data-number="004" data-type="entity">
+        <div class="entity-art art-watcher">
+          <span class="art-coordinate">BLACKWOOD / N</span>
+          <div class="watcher-shape"></div>
+          <span class="art-label">SUBJECT OBSERVED</span>
+          <span class="entity-number">004</span>
+        </div>
+
+        <div class="entity-info">
+          <div class="entity-meta">
+            <span>ENTITY / 004</span>
+            <span class="risk">OBSERVED</span>
+          </div>
+          <h3>THE WATCHER</h3>
+          <p>It stands outside. Always facing the house. Never moving.</p>
+          <button class="open-file">OPEN CASE FILE ↗</button>
+        </div>
+      </article>
+
+      <!-- ENTITY 005 -->
+
+      <article class="entity-card" data-name="The Mourner" data-number="005" data-type="entity">
+        <div class="entity-art art-mourner">
+          <span class="art-coordinate">03:33 AM</span>
+          <div class="mourner-shape"></div>
+          <span class="art-label">AUDIO ANOMALY</span>
+          <span class="entity-number">005</span>
+        </div>
+
+        <div class="entity-info">
+          <div class="entity-meta">
+            <span>ENTITY / 005</span>
+            <span class="risk">UNCONFIRMED</span>
+          </div>
+          <h3>THE MOURNER</h3>
+          <p>A silent figure at an abandoned station. It never boards.</p>
+          <button class="open-file">OPEN CASE FILE ↗</button>
+        </div>
+      </article>
+
+      <!-- ENTITY 006 -->
+
+      <article class="entity-card" data-name="The Red Visitor" data-number="006" data-type="entity">
+        <div class="entity-art art-visitor">
+          <span class="art-coordinate">HOUSE 17</span>
+          <div class="visitor-shape"></div>
+          <span class="art-label">LIGHT DETECTED</span>
+          <span class="entity-number">006</span>
+        </div>
+
+        <div class="entity-info">
+          <div class="entity-meta">
+            <span>ENTITY / 006</span>
+            <span class="risk">RESTRICTED</span>
+          </div>
+          <h3>THE RED VISITOR</h3>
+          <p>A silhouette seen inside a house with no electricity.</p>
+          <button class="open-file">OPEN CASE FILE ↗</button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- INCIDENT -->
+
+  <section class="incident" id="incident">
+    <div class="incident-bg"></div>
+    <div class="incident-content">
+      <div class="section-kicker">03 / INCIDENT REPORT 1983-B</div>
+      <h2>THE BLACKWOOD<br>INCIDENT</h2>
+      <p>
+        On October 31, 1983, an entire research team disappeared
+        during a routine investigation. Their equipment was found.
+        Their recordings were recovered. Their final report was incomplete.
+      </p>
+      <div class="incident-facts">
+        <div><span>DATE</span><b>31 OCT 1983</b></div>
+        <div><span>PERSONNEL</span><b>07 MISSING</b></div>
+        <div><span>STATUS</span><b>UNRESOLVED</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVIDENCE -->
+
+  <section class="evidence" id="evidence">
+    <div class="section-kicker">04 / RECOVERED MATERIAL</div>
+    <div class="section-heading">
+      <div>
+        <h2>THE EVIDENCE</h2>
+        <p>FRAGMENTS RECOVERED FROM THE UNKNOWN.</p>
+      </div>
+    </div>
+
+    <div class="evidence-grid">
+      <div class="evidence-item">
+        <div class="evidence-icon">◉</div>
+        <span class="evidence-tag">AUDIO / 001</span>
+        <h3>THE LAST TRANSMISSION</h3>
+        <p>A recovered radio transmission from the Blackwood investigation.</p>
+        <span class="evidence-status">FILE CORRUPTED</span>
+      </div>
+
+      <div class="evidence-item">
+        <div class="evidence-icon">▧</div>
+        <span class="evidence-tag">PHOTO / 002</span>
+        <h3>UNKNOWN FIGURE</h3>
+        <p>A photograph recovered from an abandoned research facility.</p>
+        <span class="evidence-status">IMAGE DAMAGED</span>
+      </div>
+
+      <div class="evidence-item">
+        <div class="evidence-icon">⌁</div>
+        <span class="evidence-tag">DOCUMENT / 003</span>
+        <h3>THE MISSING REPORT</h3>
+        <p>The final written report of the original research team.</p>
+        <span class="evidence-status">RESTRICTED ACCESS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROTOCOL -->
+
+  <section class="protocol" id="protocol">
+    <div class="protocol-inner">
+      <div class="section-kicker">05 / FIELD INSTRUCTIONS</div>
+      <h2>IF YOU FIND<br>YOURSELF THERE.</h2>
+
+      <div class="rules">
+        <div><span>01</span><p>Do not investigate unfamiliar sounds after midnight.</p></div>
+        <div><span>02</span><p>Never approach an unidentified figure.</p></div>
+        <div><span>03</span><p>Do not follow lights appearing deep inside the forest.</p></div>
+        <div><span>04</span><p>If a familiar voice calls from an empty room, do not answer.</p></div>
+      </div>
+
+      <div class="protocol-end">THE ARCHIVE DOES NOT GUARANTEE YOUR SAFETY.</div>
+    </div>
+  </section>
+
+  <!-- FINAL TRANSMISSION -->
+
+  <section class="final-transmission">
+    <div class="transmission-noise"></div>
+    <div class="transmission-text">
+      <div class="section-kicker">INCOMING TRANSMISSION / UNKNOWN SOURCE</div>
+      <h2>ARE YOU<br>STILL THERE?</h2>
+      <button class="signal-button" id="signalButton">ESTABLISH CONNECTION</button>
+      <p class="signal-message" id="signalMessage">NO SIGNAL</p>
+      <span class="transmission-sign">END OF AVAILABLE RECORDING</span>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <a class="brand" href="#home">
+    <span class="brand-icon">V</span>
+    <span>THE <b>VEIL</b></span>
+  </a>
+  <span>AN ARCHIVE OF THE IMPOSSIBLE</span>
+  <span>© 1983–2026 / ALL RECORDS CLASSIFIED</span>
+</footer>
+
+<!-- MODAL -->
+
+<div class="modal" id="caseModal">
+  <div class="modal-panel">
+    <button class="modal-close" id="modalClose">×</button>
+    <div class="section-kicker" id="modalKicker">CASE FILE / 001</div>
+    <h2 id="modalTitle">THE HOLLOW</h2>
+    <div class="modal-rule"></div>
+    <p id="modalDescription"></p>
+
+    <div class="modal-data">
+      <div><span>FIRST REPORTED</span><b id="modalDate">OCT 31, 1983</b></div>
+      <div><span>STATUS</span><b>UNRESOLVED</b></div>
+      <div><span>LOCATION</span><b>BLACKWOOD FOREST</b></div>
+    </div>
+
+    <div class="modal-warning">
+      THIS DOCUMENT IS NOT TO BE COPIED OR REMOVED FROM THE ARCHIVE.
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
